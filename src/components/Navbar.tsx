@@ -19,6 +19,7 @@ export default function Navbar() {
     { name: 'Projecten', href: '#projects' },
     { name: 'Over Ons', href: '#about' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Advies op Maat', href: '#advice' },
   ]
 
   return (
