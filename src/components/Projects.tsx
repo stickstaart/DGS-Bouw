@@ -22,12 +22,13 @@ export default function Projects() {
             <div key={project.id} className="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden hover:shadow-md transition-shadow">
 
               {/* Afbeelding met Aspect Ratio */}
-              <div className="relative aspect-[4/3] w-full bg-slate-200">
+              <div className="relative aspect-[4/3] w-full bg-slate-200 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  priority
+                  className="object-cover transition-transform duration-500 hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
