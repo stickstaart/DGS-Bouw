@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${
-      isScrolled ? 'py-4' : 'py-6'
+      isScrolled ? 'py-3' : 'py-3'
     }`}>
       {/* De achtergrond balk (alleen bij scroll of open menu) */}
       <div className={`absolute inset-0 transition-all duration-500 ${
