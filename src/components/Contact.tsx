@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin, Send } from 'lucide-react'
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 bg-slate-900 text-white overflow-hidden">
+    <section id="contact" className="py-24 bg-slate-900 text-white overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col lg:flex-row gap-16">
 
@@ -63,7 +63,7 @@ export default function Contact() {
                 </div>
                 <div className="flex flex-col md:col-span-2">
                   <label className="text-slate-900 font-bold mb-2 ml-1">Bericht</label>
-                  <textarea rows={4} placeholder="Wat kunnen we voor u betekenen?" className="bg-slate-50 border-none rounded-xl p-4 text-slate-900 focus:ring-2 focus:ring-dgs-green outline-none resize-none"></textarea>
+                  <textarea rows={4} placeholder="Wat kunnen we voor u betekenen?" suppressHydrationWarning className="bg-slate-50 border-none rounded-xl p-4 text-slate-900 focus:ring-2 focus:ring-dgs-green outline-none resize-none"></textarea>
                 </div>
                 <button className="md:col-span-2 bg-dgs-green text-slate-900 font-black py-4 rounded-xl hover:bg-green-400 transition-all flex items-center justify-center space-x-2">
                   <span>BERICHT VERSTUREN</span>

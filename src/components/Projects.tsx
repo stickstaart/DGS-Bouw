@@ -5,7 +5,7 @@ import { projects, Project } from '@/data/projects';
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-slate-50">
+    <section id="projects" className="py-20 bg-slate-50 scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4">
 
         <div className="mb-12 text-center">
