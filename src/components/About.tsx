@@ -11,7 +11,7 @@ export default function About() {
   ]
 
   return (
-    <section id="over-ons" className="py-24 bg-white overflow-hidden">
+    <section id="about" className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-16">
 

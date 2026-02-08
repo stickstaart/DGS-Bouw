@@ -16,8 +16,8 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: 'Projecten', href: '#projecten' },
-    { name: 'Over Ons', href: '#over-ons' },
+    { name: 'Projecten', href: '#projects' },
+    { name: 'Over Ons', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ]
 
