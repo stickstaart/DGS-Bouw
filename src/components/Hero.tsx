@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link'
 
 export default function Hero() {
   return (
@@ -23,12 +24,18 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
-            <button className="w-full sm:w-auto hover:bg-white hover:text-dgs-green bg-dgs-green text-white px-8 py-4 rounded-full font-bold border-2 border-white">
+            <Link
+              href="#projecten"
+              className="w-full sm:w-auto text-center bg-dgs-green text-slate-900 hover:bg-white hover:text-dgs-green px-8 py-4 rounded-full font-bold border-2 border-dgs-green hover:border-white transition-all duration-300 shadow-lg"
+            >
               Bekijk Projecten
-            </button>
-            <button className="w-full sm:w-auto border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-full font-bold transition-all">
+            </Link>
+            <Link
+              href="#contact"
+              className="w-full sm:w-auto text-center border-2 border-white text-white hover:bg-white hover:text-slate-900 px-8 py-4 rounded-full font-bold transition-all"
+            >
               Neem Contact Op
-            </button>
+            </Link>
           </div>
         </div>
       </div>
