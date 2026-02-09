@@ -16,10 +16,9 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: 'Projecten', href: '#projects' },
+    { name: 'Projecten', href: '#projecten' }, // Was 'projects', moet '#projecten' zijn
     { name: 'Over Ons', href: '#about' },
     { name: 'Contact', href: '#contact' },
-    { name: 'Vercel Init', href: '#vercel' },
   ]
 
   return (
