@@ -52,7 +52,7 @@ export default function Contact() {
           {/* Rechterkant: Formulier */}
           <div className="lg:w-2/3">
             <div className="bg-white rounded-3xl p-8 md:p-12 shadow-2xl">
-              <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <form className="grid grid-cols-1 md:grid-cols-2 gap-6" suppressHydrationWarning={true}>
                 <div className="flex flex-col">
                   <label className="text-slate-900 font-bold mb-2 ml-1">Naam</label>
                   <input type="text" placeholder="Uw naam" suppressHydrationWarning={true} className="bg-slate-50 border-none rounded-xl p-4 text-slate-900 focus:ring-2 focus:ring-dgs-green outline-none" />
