@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="relative max-w-7xl mx-auto px-6 flex justify-between items-center">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center z-[70]">
+        <Link href="#hero" className="flex items-center z-[70]">
           <img
             src="/images/L_DGS_FC_horizontal.svg"
             alt="DGS Bouw & Renovatie"

@@ -25,7 +25,7 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="flex space-x-8 text-sm font-bold uppercase tracking-widest text-slate-400">
             <Link href="#projecten" className="hover:text-dgs-green transition-colors">Projecten</Link>
-            <Link href="#over-ons" className="hover:text-dgs-green transition-colors">Over Ons</Link>
+            <Link href="#about" className="hover:text-dgs-green transition-colors">Over Ons</Link>
             <Link href="#contact" className="hover:text-dgs-green transition-colors">Contact</Link>
           </div>
 
