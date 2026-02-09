@@ -12,9 +12,10 @@ export default function SmoothScroll({ children }: { children: React.ReactNode }
 
       if (link && link.hash && link.hash.startsWith('#')) {
         e.preventDefault()
-        const section = document.querySelector(link.hash)
+        const section = document.querySelector<HTMLElement>(link.hash);
         if (section && lenis) {
-          lenis.scrollTo(section, { offset: -80 }) // Offset voor je Navbar
+          e.preventDefault();
+          lenis.scrollTo(section, { offset: -80 });
         }
       }
     }
