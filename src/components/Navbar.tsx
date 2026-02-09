@@ -16,7 +16,7 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: 'Projecten', href: '#projecten' }, // Was 'projects', moet '#projecten' zijn
+    { name: 'Projecten', href: '#projecten' },
     { name: 'Over Ons', href: '#about' },
     { name: 'Contact', href: '#contact' },
   ]

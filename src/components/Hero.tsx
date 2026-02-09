@@ -2,7 +2,7 @@
 
 export default function Hero() {
   return (
-    <div className="relative bg-slate-900 h-[80vh] flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-32 md:pt-20 overflow-hidden bg-slate-900">
       {/* Achtergrond Overlay (Hier kun je later een mooie bouw-foto plaatsen) */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/80 to-transparent z-10" />
@@ -32,6 +32,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
