@@ -38,7 +38,7 @@ export default function About() {
             <h2 className="text-dgs-green font-black uppercase tracking-[0.2em] text-sm mb-4">
               Over DGS Bouw & Renovatie
             </h2>
-            <h3 className="text-4xl md:text-5xl font-black text-slate-900 leading-tight mb-8">
+            <h3 className="text-5xl md:text-5xl font-black text-slate-900 leading-tight mb-8">
               Vakmanschap uit <span className="text-dgs-green">Gemert</span>
             </h3>
             <p className="text-lg text-slate-600 leading-relaxed mb-8">
@@ -46,11 +46,20 @@ export default function About() {
             </p>
 
             {/* De lijst met vinkjes: items-start op desktop, items-center op mobiel */}
-            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10 w-full">
+            {/* De lijst met vinkjes: Altijd 1 kolom, gecentreerd op mobiel, links op desktop */}
+            <ul className="flex flex-col gap-4 mb-10 w-full items-center lg:items-start">
               {highlights.map((item) => (
-                <li key={item} className="flex items-center justify-center lg:justify-start space-x-3 text-slate-700 font-medium">
-                  <CheckCircle2 className="text-dgs-green w-5 h-5 flex-shrink-0" />
-                  <span>{item}</span>
+                <li
+                  key={item}
+                  className="flex items-start space-x-3 text-slate-700 font-medium max-w-sm lg:max-w-none"
+                >
+                  {/* Vinkje */}
+                  <CheckCircle2 className="text-dgs-green w-5 h-5 mt-1 flex-shrink-0" />
+
+                  {/* Tekst - Altijd links uitgelijnd t.o.v. het vinkje */}
+                  <span className="text-left leading-snug">
+        {item}
+      </span>
                 </li>
               ))}
             </ul>
