@@ -20,7 +20,7 @@ export default function Hero() {
             Wij bouwen aan uw <span className="text-dgs-green">toekomst</span>
           </h1>
           <p className="text-center text-xl text-slate-300 mb-10 leading-relaxed">
-            Van fundering tot afwerking. Uw partner in hoogwaardige bouw- en renovatieprojecten in de regio Oud-Beijerland.
+            Van fundering tot afwerking. Uw partner in hoogwaardige bouw- en renovatieprojecten in heel Nederland en België.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
