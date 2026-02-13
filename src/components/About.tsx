@@ -22,7 +22,7 @@ export default function About() {
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-slate-100 rounded-full -z-10" />
             <div className="relative rounded-3xl overflow-hidden shadow-2xl transform hover:-rotate-1 transition-transform duration-500">
               <img
-                src="/images/image1.jpg"
+                src="/images/about/istockphoto-488693432-1024x1024.jpg"
                 alt="Vakmanschap aan het werk"
                 className="w-full h-[400px] md:h-[500px] object-cover"
               />
