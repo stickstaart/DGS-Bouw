@@ -53,7 +53,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#contact"
+            href="#offerte"
             className="bg-dgs-green text-slate-900 px-8 py-2.5 rounded-full font-black text-sm hover:scale-105 transition-all shadow-lg active:scale-95"
           >
             OFFERTE
