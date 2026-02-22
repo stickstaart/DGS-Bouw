@@ -64,12 +64,17 @@ export default function About() {
               ))}
             </ul>
 
-            <button className="bg-slate-900 text-white px-10 py-4 rounded-full font-bold hover:bg-slate-800 transition-all flex items-center group">
-              Lees meer over onze werkwijze
+            <a
+              href="/algemene-voorwaarden-dgs-bouw.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-slate-900 text-white px-10 py-4 rounded-full font-bold hover:bg-slate-800 transition-all inline-flex items-center group"
+            >
+              Bekijk onze algemene voorwaarden
               <svg className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </button>
+            </a>
           </div>
 
         </div>

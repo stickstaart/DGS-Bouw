@@ -86,8 +86,16 @@ export default function Contact() {
                   ></textarea>
                 </div>
 
-                {/* Optioneel: Redirect naar een bedankpagina */}
-                <input type="hidden" name="redirect" value="https://dgsbouw.vercel.app/thanks" />
+                {/* Voeg dit verborgen veld toe aan je formulier */}
+                <input
+                  type="hidden"
+                  name="redirect"
+                  value={
+                    typeof window !== "undefined" && window.location.hostname === "localhost"
+                      ? "http://localhost:3000/thanks"
+                      : "https://dgsbouw.vercel.app/thanks"
+                  }
+                />
 
                 <button
                   type="submit" // Zorg dat dit een submit button is
