@@ -22,11 +22,21 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="flex space-x-8 text-sm font-bold uppercase tracking-widest text-slate-400">
-            <Link href="#projecten" className="hover:text-dgs-green transition-colors">Projecten</Link>
-            <Link href="#about" className="hover:text-dgs-green transition-colors">Over Ons</Link>
-            <Link href="#contact" className="hover:text-dgs-green transition-colors">Contact</Link>
+          {/* Quick Links & Algemene Voorwaarden */}
+          <div className="flex flex-col items-center md:items-start gap-2">
+            <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 text-sm font-bold uppercase tracking-widest text-slate-400">
+              <Link href="#projecten" className="hover:text-dgs-green transition-colors">Projecten</Link>
+              <Link href="#about" className="hover:text-dgs-green transition-colors">Over Ons</Link>
+              <Link href="#contact" className="hover:text-dgs-green transition-colors">Contact</Link>
+            </div>
+            {/* Subtiele link op desktop, onderdeel van de lijst op mobiel effect bereikt door padding/margin */}
+            <Link
+              href="/algemene-voorwaarden-dgs-bouw.pdf"
+              target="_blank"
+              className="text-[10px] md:text-xs font-medium uppercase tracking-widest text-slate-600 hover:text-dgs-green transition-colors mt-2 md:mt-1"
+            >
+              Algemene Voorwaarden
+            </Link>
           </div>
 
           {/* Socials / Rechtspraak */}
