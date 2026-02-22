@@ -111,7 +111,7 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="md:col-span-2 bg-dgs-green text-slate-900 font-black py-4 rounded-xl hover:bg-green-400 transition-all flex items-center justify-center space-x-2 shadow-lg shadow-dgs-green/20"
+                  className="md:col-span-2 bg-dgs-green text-slate-900 font-black py-4 rounded-xl hover:bg-green-400 transition-all flex items-center justify-center space-x-2 shadow-lg shadow-dgs-green/20 cursor-pointer"
                 >
                   <span>BERICHT VERSTUREN</span>
                   <Send className="w-5 h-5" />

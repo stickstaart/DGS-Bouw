@@ -16,9 +16,9 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: 'Projecten', href: '#projecten' },
-    { name: 'Over Ons', href: '#about' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Projecten', href: '/#projecten' },
+    { name: 'Over Ons', href: '/#about' },
+    { name: 'Contact', href: '/#contact' },
   ]
 
   return (
@@ -33,7 +33,7 @@ export default function Navbar() {
       <div className="relative max-w-7xl mx-auto px-6 flex justify-between items-center">
 
         {/* Logo */}
-        <Link href="#hero" className="flex items-center z-[70]">
+        <Link href="/#hero" className="flex items-center z-[70]">
           <img
             src="/images/L_DGS_FC_horizontal.svg"
             alt="DGS Bouw & Renovatie"
@@ -53,7 +53,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="#offerte"
+            href="/offerte"
             className="bg-dgs-green text-slate-900 px-8 py-2.5 rounded-full font-black text-sm hover:scale-105 transition-all shadow-lg active:scale-95"
           >
             OFFERTE
