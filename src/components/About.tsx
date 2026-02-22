@@ -7,7 +7,7 @@ export default function About() {
     "Ruim 35 jaar ervaring in renovatie",
     "Specialist in hoogwaardige afwerking",
     "Transparante communicatie & heldere offertes",
-    "Gevestigd in Gemert"
+    "Gevestigd aan de Rooije-Hoefsedijk 68, Gemert"
   ]
 
   return (
