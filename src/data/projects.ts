@@ -121,8 +121,8 @@ export const projects: Project[] = [
     category: "Montage",
     image: "/images/projects/vloereporijswijk/vloereporijswijk1.JPG",
     images: [
-      "/images/projects/vloereporijswijk/vloereporijswijk1.MP4",
-      "/images/projects/vloereporijswijk/vloereporijswijk2.MP4",
+/*      "/images/projects/vloereporijswijk/vloereporijswijk1.MP4",
+      "/images/projects/vloereporijswijk/vloereporijswijk2.MP4",*/
       "/images/projects/vloereporijswijk/vloereporijswijk2.JPG",
       "/images/projects/vloereporijswijk/vloereporijswijk3.JPG",
       "/images/projects/vloereporijswijk/vloereporijswijk4.JPG",
