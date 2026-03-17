@@ -10,8 +10,8 @@ export default function Home() {
     <main>
       {/* Hier komen straks je Hero en Navbar */}
       <Hero />
-      <UnderConstruction/>
-      {/*<Projects />*/}
+{/*      <UnderConstruction/>*/}
+      <Projects />
       <About />
       <Contact />
       <Footer />
