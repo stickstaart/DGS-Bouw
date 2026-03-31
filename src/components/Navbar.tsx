@@ -16,7 +16,7 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: 'Projecten', href: '/#projecten' },
+    { name: 'Projecten', href: '/?scroll=projecten/#projecten' }, // Verander dit van '/#projecten'
     { name: 'Over Ons', href: '/#about' },
     { name: 'Contact', href: '/#contact' },
   ]

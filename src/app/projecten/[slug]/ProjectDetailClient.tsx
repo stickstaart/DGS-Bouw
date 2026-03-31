@@ -61,7 +61,7 @@ export default function ProjectDetailClientV2({ project }: Props) {
       {/* Terug-knop Container */}
       <div className="max-w-7xl mx-auto px-4">
         <Link
-          href="/#projecten"
+          href="/?scroll=#projecten"
           className="inline-flex items-center text-slate-400 hover:text-dgs-green mb-10 transition-colors group text-sm font-bold uppercase tracking-widest"
         >
           <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
