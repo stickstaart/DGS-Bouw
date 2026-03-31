@@ -34,7 +34,7 @@ export const projects: Project[] = [
     id: 1,
     slug: "zandcement-dekvloer-geldrop",
     location: "Privé Woning | Geldrop",
-    title: "80 m² Zandcementdekvloer",
+    title: "80m² Zandcementdekvloer",
     category: "Montage",
     image: "/images/projects/privewoninggeldrop/privewoninggeldrop1.jpg",
     images: [
