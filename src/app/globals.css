@@ -16,6 +16,14 @@ body {
     margin: 0;
 }
 
+/* src/app/globals.css */
 html {
     scroll-behavior: smooth;
+}
+
+/* Optioneel: zorg dat de scroll stopt als de gebruiker liever geen animaties ziet (toegankelijkheid) */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
 }

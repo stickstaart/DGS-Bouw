@@ -36,22 +36,18 @@ export const getAllProjects = unstable_cache(
     try {
       console.log("--- Cloudinary Deep Scan Start ---")
 
-      // 1. Haal de lijst met alle submappen op in de hoofdfolder
       const folderResult = await cloudinary.api.sub_folders(ROOT_FOLDER)
-      const subFolders = folderResult.folders.map((f: any) => f.name)
 
-      console.log("Gevonden mappen in Cloudinary:", subFolders)
+      // 1. Sorteer de mappen alfabetisch (zodat 01 voor 02 komt)
+      const subFolders = folderResult.folders
+        .map((f: any) => f.name)
+        .sort(); // <--- Dit zorgt voor de juiste volgorde op basis van de naam
 
-      if (subFolders.length === 0) {
-        console.log("Geen submappen gevonden in", ROOT_FOLDER)
-        return []
-      }
+      console.log("Gevonden mappen op volgorde:", subFolders)
 
-      // 2. Haal per map de assets op
       const projectPromises = subFolders.map(async (folderName: string) => {
         const folderPath = `${ROOT_FOLDER}/${folderName}`
 
-        // Zoek specifiek naar alle bestanden IN deze submap
         const result = await cloudinary.search
           .expression(`folder:"${folderPath}"`)
           .with_field('metadata')
@@ -59,16 +55,18 @@ export const getAllProjects = unstable_cache(
           .execute()
 
         const assets = result.resources as any[]
-
         if (assets.length === 0) return null
 
-        // Bepaal de cover (zoek naar bestand met '_cover' in de naam, anders de eerste)
         const cover = assets.find(a => a.public_id.includes('_cover')) || assets[0]
         const meta = cover.metadata || {}
 
+        // 2. Maak de titel mooi: haal "01-" of "02-" aan het begin weg
+        // Regex: /^(\d+-)/ matches een getal gevolgd door een streepje aan het begin
+        const schoneTitel = meta.titel || folderName.replace(/^(\d+-)/, '').replace(/-/g, ' ');
+
         return {
-          slug: folderName,
-          titel: meta.titel || folderName.replace(/-/g, ' '),
+          slug: folderName, // De slug behoudt de nummers voor de link (veiligst)
+          titel: schoneTitel,
           beschrijving: meta.beschrijving || '',
           locatie: meta.locatie || '',
           categorie: meta.categorie || 'Alle',
@@ -87,13 +85,8 @@ export const getAllProjects = unstable_cache(
       })
 
       const resolvedProjects = await Promise.all(projectPromises)
+      const finalProjects = resolvedProjects.filter((p): p is ProjectFromCloudinary => p !== null)
 
-      // Filter lege mappen eruit
-      const finalProjects = resolvedProjects.filter(
-        (p): p is ProjectFromCloudinary => p !== null
-      )
-
-      console.log("Succesvol geladen projecten:", finalProjects.map(p => p.slug))
       return finalProjects
 
     } catch (error) {
@@ -102,7 +95,7 @@ export const getAllProjects = unstable_cache(
     }
   },
   ['projects-deep-scan'],
-  { revalidate: 60 } // Cache ververst elke minuut
+  { revalidate: 60 }
 )
 
 export async function getProjectBySlug(slug: string): Promise<ProjectFromCloudinary | null> {
