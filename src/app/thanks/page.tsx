@@ -5,7 +5,7 @@ import { Home, CheckCircle2, ArrowLeft } from 'lucide-react';
 export default function ThanksPage() {
   return (
     <main className="min-h-screen bg-slate-950 flex items-center justify-center px-4 relative overflow-hidden">
-      {/* Subtiele achtergrond glow om te matchen met je main site */}
+      {/* Subtiele achtergrond glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-dgs-green/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-md w-full text-center space-y-8 bg-slate-900/40 backdrop-blur-xl p-8 md:p-12 rounded-[2rem] border border-white/10 shadow-2xl relative z-10">

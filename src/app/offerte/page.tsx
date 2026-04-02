@@ -11,7 +11,7 @@ export default function OffertePage() {
         {/* De Bouwtekening Achtergrond */}
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/hero/hero.jpg" // Zorg dat dit pad klopt met je homepage hero
+            src="/images/hero/hero.jpg"
             alt="DGS Bouwtekening"
             className="w-full h-full object-cover opacity-40" // Opacity toegevoegd voor de blueprint look
           />
