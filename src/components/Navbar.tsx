@@ -2,10 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
+
 
 export default function Navbar() {
+  const router = useRouter()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,16 +20,36 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: 'Projecten', href: '/?scroll=projecten/#projecten' }, // Verander dit van '/#projecten'
-    { name: 'Over Ons', href: '/#about' },
-    { name: 'Contact', href: '/#contact' },
+    { name: 'Projecten', href: '#projecten' },
+    { name: 'Over Ons', href: '#about' },
+    { name: 'Contact', href: '#contact' },
   ]
+
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
+    e.preventDefault()
+    setIsMobileMenuOpen(false)
+
+    const isOnHomePage = window.location.pathname === '/'
+    const id = href.replace('#', '')
+
+    if (isOnHomePage) {
+      // Zelfde pagina: direct scrollen
+      const el = document.getElementById(id)
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    } else {
+      // Andere pagina: navigeer naar home en scroll daarna
+      router.push('/')
+      setTimeout(() => {
+        const el = document.getElementById(id)
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 300)
+    }
+  }
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${
       isScrolled ? 'py-3' : 'py-3'
     }`}>
-      {/* De achtergrond balk (alleen bij scroll of open menu) */}
       <div className={`absolute inset-0 transition-all duration-500 ${
         isScrolled || isMobileMenuOpen ? 'bg-white/90 backdrop-blur-md shadow-md opacity-100' : 'opacity-0'
       }`} />
@@ -33,7 +57,7 @@ export default function Navbar() {
       <div className="relative max-w-7xl mx-auto px-6 flex justify-between items-center">
 
         {/* Logo */}
-        <Link href="/#hero" className="flex items-center z-[70]">
+        <Link href="#hero" onClick={(e) => handleNavClick(e, '#hero')} className="flex items-center z-[70]">
           <img
             src="/images/L_DGS_FC_horizontal.svg"
             alt="DGS Bouw & Renovatie"
@@ -48,7 +72,12 @@ export default function Navbar() {
           isScrolled ? 'text-slate-900' : 'text-white'
         }`}>
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href} className="hover:text-dgs-green transition-colors uppercase tracking-wider text-sm">
+            <Link
+              key={link.name}
+              href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="hover:text-dgs-green transition-colors uppercase tracking-wider text-sm"
+            >
               {link.name}
             </Link>
           ))}
@@ -72,14 +101,12 @@ export default function Navbar() {
           </div>
         </button>
 
-        {/* Mobile Overlay Menu - Gecentreerde Container */}
+        {/* Mobile Overlay Menu */}
         <div className={`fixed inset-0 z-[60] flex items-center justify-center p-4 transition-all duration-500 md:hidden ${
           isMobileMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'
         }`}>
-          {/* Backdrop blur voor de hele pagina als menu open is */}
           <div className="absolute inset-0 bg-slate-900/40 backdrop-blur-sm" onClick={() => setIsMobileMenuOpen(false)} />
 
-          {/* De Menu Kaart */}
           <div className={`relative bg-white w-full max-w-sm rounded-3xl p-10 shadow-2xl transition-all duration-500 transform ${
             isMobileMenuOpen ? 'scale-100 translate-y-0' : 'scale-90 translate-y-10'
           }`}>
@@ -88,7 +115,7 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href)}  // ✅ Fix
                   className="text-2xl font-black text-slate-900 hover:text-dgs-green transition-colors uppercase tracking-tight"
                 >
                   {link.name}
@@ -97,7 +124,7 @@ export default function Navbar() {
               <div className="w-full h-px bg-slate-100 my-2" />
               <Link
                 href="#contact"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={(e) => handleNavClick(e, '#contact')}  // ✅ Fix
                 className="bg-dgs-green text-slate-900 w-full text-center py-4 rounded-2xl font-black text-lg shadow-xl shadow-dgs-green/20"
               >
                 OFFERTE AANVRAGEN

@@ -5,10 +5,22 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowLeft, CheckCircle2, X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { ProjectFromCloudinary } from '@/lib/cloudinary'
+import { useRouter } from 'next/navigation'
 
 type Props = { project: ProjectFromCloudinary }
 
 export default function ProjectDetailClientV2({ project }: Props) {
+  const router = useRouter()
+
+  const handleBackToPortfolio = (e: React.MouseEvent) => {
+    e.preventDefault()
+    router.push('/')
+    // Wacht tot de pagina geladen is, scroll dan naar #projecten
+    setTimeout(() => {
+      const el = document.getElementById('projecten')
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }, 300)
+  }
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
   const touchStartX = useRef<number | null>(null)
 
@@ -60,13 +72,6 @@ export default function ProjectDetailClientV2({ project }: Props) {
     <main className="min-h-screen bg-slate-950 text-white pt-28 pb-24">
       {/* Terug-knop Container */}
       <div className="max-w-7xl mx-auto px-4">
-        <Link
-          href="/?scroll=#projecten"
-          className="inline-flex items-center text-slate-400 hover:text-dgs-green mb-10 transition-colors group text-sm font-bold uppercase tracking-widest"
-        >
-          <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-          Terug naar portfolio
-        </Link>
       </div>
 
       <div className="max-w-7xl mx-auto lg:px-4">
@@ -100,6 +105,15 @@ export default function ProjectDetailClientV2({ project }: Props) {
               className="inline-block bg-dgs-green text-slate-900 font-black px-8 py-4 rounded-xl hover:bg-white transition-all text-sm uppercase tracking-widest"
             >
               Ook zo'n project starten?
+            </Link>
+
+            <Link
+              href="/#projecten"
+              onClick={handleBackToPortfolio}
+              className="inline-flex items-center text-slate-400 hover:text-dgs-green transition-colors group text-sm font-bold uppercase tracking-widest mt-10"
+            >
+              <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
+              Terug naar portfolio
             </Link>
           </div>
 
