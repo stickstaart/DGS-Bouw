@@ -9,6 +9,10 @@ import { useRouter } from 'next/navigation'
 
 type Props = { project: ProjectFromCloudinary }
 
+const optimizeCloudinaryUrl = (url: string) => {
+  return url.replace('/upload/', '/upload/f_auto,q_auto/')
+}
+
 export default function ProjectDetailClientV2({ project }: Props) {
   const router = useRouter()
 
@@ -131,7 +135,7 @@ export default function ProjectDetailClientV2({ project }: Props) {
                 />
               ) : (
                 <Image
-                  src={coverAsset.secure_url}
+                  src={optimizeCloudinaryUrl(coverAsset.secure_url)}
                   alt={project.titel}
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -172,7 +176,7 @@ export default function ProjectDetailClientV2({ project }: Props) {
                     </>
                   ) : (
                     <Image
-                      src={asset.secure_url}
+                      src={optimizeCloudinaryUrl(asset.secure_url)}
                       alt={`${project.titel} ${idx + 1}`}
                       fill
                       sizes={fewAssets ? '50vw' : '(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw'}
@@ -207,7 +211,7 @@ export default function ProjectDetailClientV2({ project }: Props) {
               <video src={currentAsset.secure_url} autoPlay loop muted playsInline controls className="max-w-full max-h-[85vh] rounded-xl object-contain" />
             ) : (
               <Image
-                src={currentAsset.secure_url}
+                src={optimizeCloudinaryUrl(currentAsset.secure_url)}
                 alt="Lightbox"
                 width={currentAsset.width}
                 height={currentAsset.height}

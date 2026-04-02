@@ -9,6 +9,10 @@ type Props = {
   projects: ProjectFromCloudinary[]
 }
 
+const optimizeCloudinaryUrl = (url: string) => {
+  return url.replace('/upload/', '/upload/f_auto,q_auto/')
+}
+
 export default function ProjectsGrid({ projects }: Props) {
   const categories = ['Alle', ...Array.from(new Set(projects.map(p => p.categorie)))]
   const [activeFilter, setActiveFilter] = useState('Alle')
@@ -46,7 +50,7 @@ export default function ProjectsGrid({ projects }: Props) {
           >
             <div className="relative aspect-[4/3] w-full overflow-hidden">
               <Image
-                src={project.coverUrl}
+                src={optimizeCloudinaryUrl(project.coverUrl)}
                 alt={project.titel}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
