@@ -18,7 +18,7 @@ export default function Footer() {
               className="h-12 w-auto brightness-0 invert mb-4"
             />
             <p className="text-slate-500 text-sm max-w-xs text-center md:text-left">
-              Uw partner voor hoogwaardige bouw- en renovatieprojecten in Oud-Beijerland en omstreken.
+              Uw partner in hoogwaardige bouw- en renovatieprojecten in heel Nederland en België.
             </p>
           </div>
 
@@ -45,7 +45,7 @@ export default function Footer() {
               © {currentYear} DGS Bouw & Renovatie. <br className="md:hidden" /> Alle rechten voorbehouden.
             </p>
             <p className="text-[10px] text-slate-700 uppercase tracking-tighter">
-              KVK: 12345678 | Realisatie: Eigen beheer
+              Website: StickStaart
             </p>
           </div>
 
