@@ -7,7 +7,7 @@ export default function About() {
     "Ruim 35 jaar ervaring in renovatie",
     "Specialist in hoogwaardige afwerking",
     "Transparante communicatie & heldere offertes",
-    "Gevestigd aan de Rooije-Hoefsedijk 68, Gemert"
+    "Gevestigd in Gemert"
   ]
 
   return (
@@ -41,7 +41,7 @@ export default function About() {
             <h3 className="text-5xl md:text-5xl font-black text-slate-900 leading-tight mb-8">
               Vakmanschap uit <span className="text-dgs-green">Gemert</span>
             </h3>
-            <p className="text-lg text-slate-600 leading-relaxed mb-8">
+            <p className="mx-8 md:mx-0 text-l text-slate-600 leading-relaxed mb-8">
               Bij DGS Bouw & Renovatie geloven we dat een verbouwing meer is dan alleen stenen en hout. Het gaat om het realiseren van uw droomwoning met oog voor detail en een passie voor kwaliteit. Of het nu gaat om een complete renovatie of een specifieke afwerking, wij staan voor u klaar.
             </p>
 
@@ -54,7 +54,7 @@ export default function About() {
                   className="flex items-start space-x-3 text-slate-700 font-medium max-w-sm lg:max-w-none"
                 >
                   {/* Vinkje */}
-                  <CheckCircle2 className="text-dgs-green w-5 h-5 mt-1 flex-shrink-0" />
+                  <CheckCircle2 className="text-dgs-green w-5 h-5 mt-1 flex-shrink-0 hidden md:block" />
 
                   {/* Tekst - Altijd links uitgelijnd t.o.v. het vinkje */}
                   <span className="text-left leading-snug">
