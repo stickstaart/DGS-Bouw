@@ -19,10 +19,10 @@ export default function Hero() {
           <h1 className="text-center text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
             Wij bouwen aan uw <span className="text-dgs-green">toekomst</span>
           </h1>
-          <p className="text-center mx-8 text-m sm:text-xl text-slate-300 mb-10 leading-relaxed">
-            Van fundering tot afwerking. Uw partner in hoogwaardige bouw- en renovatieprojecten in heel Nederland en België.
+          <p className="text-center mx-8 text-m sm:text-m text-slate-300 mb-10 leading-relaxed">
+            <span className="block">Van fundering tot afwerking.</span>
+            <span className="block">Uw partner in hoogwaardige bouw- en renovatieprojecten in heel Nederland en België.</span>
           </p>
-
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-10">
             <Link
               href="#projecten"

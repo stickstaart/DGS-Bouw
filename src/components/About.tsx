@@ -41,7 +41,7 @@ export default function About() {
             <h3 className="text-5xl md:text-5xl font-black text-slate-900 leading-tight mb-8">
               Vakmanschap uit <span className="text-dgs-green">Gemert</span>
             </h3>
-            <p className="mx-8 md:mx-0 text-l text-slate-600 leading-relaxed mb-8">
+            <p className="mx-8 md:mx-0 text-m text-slate-600 leading-relaxed mb-8">
               Bij DGS Bouw & Renovatie geloven we dat een verbouwing meer is dan alleen stenen en hout. Het gaat om het realiseren van uw droomwoning met oog voor detail en een passie voor kwaliteit. Of het nu gaat om een complete renovatie of een specifieke afwerking, wij staan voor u klaar.
             </p>
 

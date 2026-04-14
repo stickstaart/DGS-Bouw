@@ -89,7 +89,7 @@ export default function ProjectDetailClientV2({ project }: Props) {
             <h1 className="text-4xl xl:text-5xl font-black leading-tight mb-6">
               {project.titel}
             </h1>
-            <p className="text-slate-400 text-lg leading-relaxed mb-8">
+            <p className="text-slate-400 text-m leading-relaxed mb-8">
               {project.beschrijving}
             </p>
 
