@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="relative container mx-auto px-4 z-20 flex justify-center">
         <div className="max-w-3xl">
           <span className="text-center text-dgs-green font-bold uppercase tracking-[0.2em] text-sm mb-4 block">
-            Welkom bij DGS Bouw & Renovatie
+            Welkom bij DGS Bouw
           </span>
           <h1 className="text-center text-5xl md:text-7xl font-extrabold text-white leading-tight mb-6">
             Wij bouwen aan uw <span className="text-dgs-green">toekomst</span>

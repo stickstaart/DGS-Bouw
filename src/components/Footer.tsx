@@ -42,7 +42,7 @@ export default function Footer() {
           {/* Socials / Rechtspraak */}
           <div className="text-center md:text-right">
             <p className="text-slate-500 text-xs mb-2">
-              © {currentYear} DGS Bouw & Renovatie. <br className="md:hidden" />
+              © {currentYear} DGS Bouw <br className="md:hidden" />
             </p>
             <p className="text-[10px] text-slate-700 uppercase tracking-tighter">
               Website: StickStaart

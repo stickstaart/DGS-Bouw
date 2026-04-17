@@ -36,13 +36,13 @@ export default function About() {
           {/* Tekst Content - Hier passen we de uitlijning aan */}
           <div className="lg:w-1/2 text-center lg:text-left flex flex-col items-center lg:items-start">
             <h2 className="text-dgs-green font-black uppercase tracking-[0.2em] text-sm mb-4">
-              Over DGS Bouw & Renovatie
+              Over DGS Bouw
             </h2>
             <h3 className="text-5xl md:text-5xl font-black text-slate-900 leading-tight mb-8">
               Vakmanschap uit <span className="text-dgs-green">Gemert</span>
             </h3>
             <p className="mx-8 md:mx-0 text-m text-slate-600 leading-relaxed mb-8">
-              Bij DGS Bouw & Renovatie geloven we dat een verbouwing meer is dan alleen stenen en hout. Het gaat om het realiseren van uw droomwoning met oog voor detail en een passie voor kwaliteit. Of het nu gaat om een complete renovatie of een specifieke afwerking, wij staan voor u klaar.
+              Bij DGS Bouw geloven we dat een verbouwing meer is dan alleen stenen en hout. Het gaat om het realiseren van uw droomwoning met oog voor detail en een passie voor kwaliteit. Of het nu gaat om een complete renovatie of een specifieke afwerking, wij staan voor u klaar.
             </p>
 
             {/* De lijst met vinkjes: items-start op desktop, items-center op mobiel */}
