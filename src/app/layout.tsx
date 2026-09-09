@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "DGS Bouw | Uw partner in bouw en renovatie",
   description: "DGS Bouw is gespecialiseerd in professionele bouwwerkzaamheden, renovaties en tegeldruktechniek. Neem contact op voor een vrijblijvende offerte.",
   icons: {
-    icon: "/favicon.ico", // of favicon.png / icon.png
+    icon: "/favicon.png",
   },
 };
 
